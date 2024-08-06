@@ -25,6 +25,7 @@ Cryptography is a technique of securing information and communications through t
 ### 1. Symmetric Key Cryptography
 
 It is an encryption system where the sender and receiver of a message use a single common key to encrypt and decrypt messages. Symmetric Key cryptography is faster and simpler, but the problem is that the sender and receiver have to exchange keys securely. The most popular symmetric key cryptography systems are Data Encryption Systems (DES) and Advanced Encryption Systems (AES).
+<br>
 ![Symmetric Type](https://github.com/user-attachments/assets/ec1b7808-999e-475c-87ff-e6ce669fd9d2)
 
 
@@ -35,6 +36,8 @@ There is no usage of any key in this algorithm. A hash value with a fixed length
 ### 3. Asymmetric Key Cryptography
 
 In Asymmetric Key Cryptography, a pair of keys is used to encrypt and decrypt information. A receiver’s public key is used for encryption and a receiver’s private key is used for decryption. Public keys and Private keys are different. Even if the public key is known by everyone, the intended receiver can only decode it because he alone knows his private key. The most popular asymmetric key cryptography algorithm is the RSA algorithm.
+<br>
+![Asymmetric Type](https://github.com/user-attachments/assets/68a9bd1b-270a-4bbc-80ec-46f07c66ff76)
 
 
 ## Applications of Cryptography
