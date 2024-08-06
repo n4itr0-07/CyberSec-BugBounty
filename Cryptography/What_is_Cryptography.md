@@ -31,7 +31,10 @@ It is an encryption system where the sender and receiver of a message use a sing
 
 ### 2. Hash Functions
 
-There is no usage of any key in this algorithm. A hash value with a fixed length is calculated as per the plain text which makes it impossible for the contents of plain text to be recovered. Many operating systems use hash functions to encrypt passwords.
+There is no usage of any key in this algorithm. A hash value with a fixed length is calculated as per the plain text which makes it impossible for the contents of plain text to be recovered. Many operating systems use hash functions to encrypt passwords.  
+
+![Hashing](https://github.com/user-attachments/assets/ebe1630f-8af6-4736-a7c8-b2b1b3f81676)
+
 
 ### 3. Asymmetric Key Cryptography
 
