@@ -9,6 +9,7 @@ Cryptography is a technique of securing communication by converting plain text i
 Cryptography is a technique of securing information and communications through the use of codes so that only those persons for whom the information is intended can understand and process it, thus preventing unauthorized access to information. The prefix “crypt” means “hidden” and the suffix “graphy” means “writing”. In Cryptography, the techniques that are used to protect information are obtained from mathematical concepts and a set of rule-based calculations known as algorithms to convert messages in ways that make them hard to decode. These algorithms are used for cryptographic key generation, digital signing, and verification to protect data privacy, web browsing on the internet, and to protect confidential transactions such as credit card and debit card transactions.
 
 
+![cry](https://github.com/user-attachments/assets/d2cecf47-a28c-4572-bc46-a7436e581206)
 
 ## Features Of Cryptography
 
@@ -25,6 +26,8 @@ Cryptography is a technique of securing information and communications through t
 
 It is an encryption system where the sender and receiver of a message use a single common key to encrypt and decrypt messages. Symmetric Key cryptography is faster and simpler, but the problem is that the sender and receiver have to exchange keys securely. The most popular symmetric key cryptography systems are Data Encryption Systems (DES) and Advanced Encryption Systems (AES).
 
+![Symmetric Type](https://github.com/user-attachments/assets/ec1b7808-999e-475c-87ff-e6ce669fd9d2)
+
 
 ### 2. Hash Functions
 
@@ -33,6 +36,8 @@ There is no usage of any key in this algorithm. A hash value with a fixed length
 ### 3. Asymmetric Key Cryptography
 
 In Asymmetric Key Cryptography, a pair of keys is used to encrypt and decrypt information. A receiver’s public key is used for encryption and a receiver’s private key is used for decryption. Public keys and Private keys are different. Even if the public key is known by everyone, the intended receiver can only decode it because he alone knows his private key. The most popular asymmetric key cryptography algorithm is the RSA algorithm.
+
+![Asymmetric Type](https://github.com/user-attachments/assets/68a9bd1b-270a-4bbc-80ec-46f07c66ff76)
 
 
 ## Applications of Cryptography
