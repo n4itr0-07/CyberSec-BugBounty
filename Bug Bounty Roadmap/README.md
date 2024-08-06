@@ -1,5 +1,3 @@
-Please don't hesitate to contribute to this repo!
-
 # Bug Bounty Beginner's Roadmap
 
 Hi! I'm **Ansh Bhawnani**. I am currently working as a Security Engineer and also a part time content creator. I am creating this repository for everyone to contribute as to guide the young and enthusiastic minds for starting their career in bug bounties. More content will be added regularly. Keep following. So let's get started!
