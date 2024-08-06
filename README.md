@@ -1,6 +1,3 @@
-Sure! Here’s a suitable `README.md` file for your **CyberSec-BugBounty** repository:
-
-```markdown
 # CyberSec-BugBounty
 
 Welcome to the **CyberSec-BugBounty** repository! This is a comprehensive collection of my journey and studies in the fields of cybersecurity and bug bounty hunting. Here, you'll find a variety of resources, notes, and practical projects aimed at enhancing knowledge and skills in identifying and mitigating security vulnerabilities.
@@ -47,5 +44,5 @@ Contributions are welcome! If you have any resources, tools, or insights to shar
 
 Happy Hunting!
 
-Salik Seraj Naik
-```
+**Salik Seraj Naik**
+
