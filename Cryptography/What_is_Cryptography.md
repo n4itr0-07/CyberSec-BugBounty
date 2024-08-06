@@ -25,6 +25,7 @@ Cryptography is a technique of securing information and communications through t
 ### 1. Symmetric Key Cryptography
 
 It is an encryption system where the sender and receiver of a message use a single common key to encrypt and decrypt messages. Symmetric Key cryptography is faster and simpler, but the problem is that the sender and receiver have to exchange keys securely. The most popular symmetric key cryptography systems are Data Encryption Systems (DES) and Advanced Encryption Systems (AES).
+![Symmetric Type](https://github.com/user-attachments/assets/ec1b7808-999e-475c-87ff-e6ce669fd9d2)
 
 
 ### 2. Hash Functions
