@@ -9,6 +9,7 @@ Cryptography is a technique of securing communication by converting plain text i
 Cryptography is a technique of securing information and communications through the use of codes so that only those persons for whom the information is intended can understand and process it, thus preventing unauthorized access to information. The prefix “crypt” means “hidden” and the suffix “graphy” means “writing”. In Cryptography, the techniques that are used to protect information are obtained from mathematical concepts and a set of rule-based calculations known as algorithms to convert messages in ways that make them hard to decode. These algorithms are used for cryptographic key generation, digital signing, and verification to protect data privacy, web browsing on the internet, and to protect confidential transactions such as credit card and debit card transactions.
 
 
+![cry](https://github.com/user-attachments/assets/d2cecf47-a28c-4572-bc46-a7436e581206)
 
 ## Features Of Cryptography
 
