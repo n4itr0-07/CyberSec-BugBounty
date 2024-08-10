@@ -70,7 +70,7 @@ An application that doesn’t enforce password complexity requirements might all
 **Mitigation:**  
 - Follow secure design principles from the beginning.
 - Perform threat modeling and risk assessment.
-- Regularly update and review design patterns.
+- Regularly update and review design patterns.P
 
 ---
 
