@@ -5,6 +5,8 @@ The OWASP (Open Web Application Security Project) Top 10 is a standard awareness
 Let’s go through each of the OWASP Top 10 vulnerabilities for 2024, providing detailed explanations, examples, and guidance on how to mitigate these risks.
 
 ---
+**Visit OWASP Official Site [Visit OWASP](https://owasp.org/)**
+
 
 ### 1. **Broken Access Control**
 **Description:**  
@@ -191,3 +193,10 @@ Here’s a simple visual design using Markdown to reinforce these concepts:
 ```
 
 By staying updated with these vulnerabilities and incorporating security best practices in your development and testing processes, you can contribute to creating more secure applications and systems. Happy learning, and may your journey in cybersecurity be both rewarding and impactful!
+
+---
+---
+### Try Hack Me
+
+**Visit [Try Hack Me OWASP Top 10 ](https://tryhackme.com/r/room/owasptop102021) for more information also practical**
+
