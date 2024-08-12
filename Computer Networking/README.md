@@ -83,4 +83,7 @@ This repository contains a comprehensive guide to computer networking, covering 
 12. [Hands-on Labs and Exercises](#12-hands-on-labs-and-exercises)
     - [Setting Up a Home Network](#121-setting-up-a-home-network)
     - [Basic Router and Switch Configuration](#122-basic-router-and-switch-configuration)
-    -
+    - [Wireshark Packet Analysis](#123-wireshark-packet-analysis)
+    - [Subnetting Practice Problems](#124-subnetting-practice-problems)
+    - [Setting Up a VLAN](#125-setting-up-a-vlan)
+    - [Creating a Secure VPN Connection](#126-creating-a-secure-vpn-connection)
