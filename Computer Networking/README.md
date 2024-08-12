@@ -1,140 +1,86 @@
-# **Computer Networking: From Basics to Advanced**
+# Computer Networking: From Basics to Advanced
 
-## **1. Introduction to Computer Networking**
-   - **What is Computer Networking?**
-   - **Types of Networks**
-     - LAN (Local Area Network)
-     - WAN (Wide Area Network)
-     - MAN (Metropolitan Area Network)
-     - PAN (Personal Area Network)
-   - **Network Topologies**
-     - Bus Topology
-     - Star Topology
-     - Ring Topology
-     - Mesh Topology
-     - Hybrid Topology
+This repository contains a comprehensive guide to computer networking, covering topics from the basics to advanced concepts. The guide is designed to provide a solid foundation in networking, essential for anyone learning bug bounty, cybersecurity, or related fields.
 
-## **2. OSI and TCP/IP Models**
-   - **OSI Model**
-     - Layer 1: Physical Layer
-     - Layer 2: Data Link Layer
-     - Layer 3: Network Layer
-     - Layer 4: Transport Layer
-     - Layer 5: Session Layer
-     - Layer 6: Presentation Layer
-     - Layer 7: Application Layer
-   - **TCP/IP Model**
-     - Network Interface
-     - Internet Layer
-     - Transport Layer
-     - Application Layer
-   - **Comparison between OSI and TCP/IP Models**
+## Table of Contents
 
-## **3. Network Devices**
-   - **Routers**
-   - **Switches**
-   - **Hubs**
-   - **Bridges**
-   - **Gateways**
-   - **Modems**
-   - **Access Points**
-   - **Network Interface Cards (NICs)**
+1. [Introduction to Computer Networking](#1-introduction-to-computer-networking)
+   - [What is Computer Networking?](#11-what-is-computer-networking)
+   - [Types of Networks](#12-types-of-networks)
+   - [Network Topologies](#13-network-topologies)
+   
+2. [OSI and TCP/IP Models](#2-osi-and-tcpip-models)
+   - [OSI Model](#21-osi-model)
+   - [TCP/IP Model](#22-tcpip-model)
+   - [Comparison between OSI and TCP/IP Models](#23-comparison-between-osi-and-tcpip-models)
 
-## **4. IP Addressing and Subnetting**
-   - **IPv4 Addressing**
-     - Structure of IPv4
-     - Classes of IPv4
-     - Private and Public IP Addresses
-   - **Subnetting**
-     - Subnet Masks
-     - Subnetting a Network
-     - CIDR (Classless Inter-Domain Routing)
-   - **IPv6 Addressing**
-     - Structure of IPv6
-     - Benefits of IPv6
-   - **IP Addressing and Subnetting Practice**
+3. [Network Devices](#3-network-devices)
+   - [Routers](#31-routers)
+   - [Switches](#32-switches)
+   - [Hubs](#33-hubs)
+   - [Bridges](#34-bridges)
+   - [Gateways](#35-gateways)
+   - [Modems](#36-modems)
+   - [Access Points](#37-access-points)
+   - [Network Interface Cards (NICs)](#38-network-interface-cards-nics)
 
-## **5. Protocols and Port Numbers**
-   - **Common Networking Protocols**
-     - HTTP/HTTPS
-     - FTP
-     - SMTP/POP3/IMAP
-     - DHCP
-     - DNS
-     - SNMP
-     - SSH/Telnet
-   - **TCP and UDP**
-     - Differences between TCP and UDP
-   - **Well-Known Port Numbers**
-     - Ports 0-1023
-     - Ports 1024-49151 (Registered Ports)
-     - Ports 49152-65535 (Dynamic or Private Ports)
+4. [IP Addressing and Subnetting](#4-ip-addressing-and-subnetting)
+   - [IPv4 Addressing](#41-ipv4-addressing)
+   - [Subnetting](#42-subnetting)
+   - [IPv6 Addressing](#43-ipv6-addressing)
+   - [IP Addressing and Subnetting Practice](#44-ip-addressing-and-subnetting-practice)
 
-## **6. Network Security**
-   - **Introduction to Network Security**
-   - **Firewalls**
-   - **Intrusion Detection Systems (IDS)**
-   - **Intrusion Prevention Systems (IPS)**
-   - **VPNs (Virtual Private Networks)**
-   - **Network Address Translation (NAT)**
-   - **Common Network Attacks**
-     - Denial of Service (DoS/DDoS)
-     - Man-in-the-Middle (MITM) Attack
-     - Phishing
-     - Spoofing
-   - **Security Best Practices**
+5. [Protocols and Port Numbers](#5-protocols-and-port-numbers)
+   - [Common Networking Protocols](#51-common-networking-protocols)
+   - [TCP and UDP](#52-tcp-and-udp)
+   - [Well-Known Port Numbers](#53-well-known-port-numbers)
 
-## **7. Wireless Networking**
-   - **Introduction to Wireless Networking**
-   - **Wi-Fi Standards (802.11a/b/g/n/ac/ax)**
-   - **Wireless Encryption Methods**
-     - WEP
-     - WPA/WPA2/WPA3
-   - **Setting up a Secure Wireless Network**
-   - **Wireless Security Best Practices**
+6. [Network Security](#6-network-security)
+   - [Introduction to Network Security](#61-introduction-to-network-security)
+   - [Firewalls](#62-firewalls)
+   - [Intrusion Detection Systems (IDS)](#63-intrusion-detection-systems-ids)
+   - [Intrusion Prevention Systems (IPS)](#64-intrusion-prevention-systems-ips)
+   - [VPNs (Virtual Private Networks)](#65-vpns-virtual-private-networks)
+   - [Network Address Translation (NAT)](#66-network-address-translation-nat)
+   - [Common Network Attacks](#67-common-network-attacks)
+   - [Security Best Practices](#68-security-best-practices)
 
-## **8. Advanced Networking Concepts**
-   - **VLANs (Virtual LANs)**
-   - **Network Address Translation (NAT)**
-   - **Quality of Service (QoS)**
-   - **Load Balancing**
-   - **Advanced Routing Protocols**
-     - BGP (Border Gateway Protocol)
-     - OSPF (Open Shortest Path First)
-     - EIGRP (Enhanced Interior Gateway Routing Protocol)
-   - **Software-Defined Networking (SDN)**
-   - **Network Function Virtualization (NFV)**
+7. [Wireless Networking](#7-wireless-networking)
+   - [Introduction to Wireless Networking](#71-introduction-to-wireless-networking)
+   - [Wi-Fi Standards (802.11a/b/g/n/ac/ax)](#72-wi-fi-standards-80211abgnacax)
+   - [Wireless Encryption Methods](#73-wireless-encryption-methods)
+   - [Setting up a Secure Wireless Network](#74-setting-up-a-secure-wireless-network)
+   - [Wireless Security Best Practices](#75-wireless-security-best-practices)
 
-## **9. Network Troubleshooting and Tools**
-   - **Common Network Issues**
-   - **Troubleshooting Steps**
-     - Layer-by-Layer Troubleshooting (OSI Model Approach)
-   - **Network Troubleshooting Tools**
-     - Ping
-     - Traceroute
-     - nslookup/dig
-     - Wireshark
-     - netstat
-     - ipconfig/ifconfig
-   - **Packet Sniffing and Analysis**
+8. [Advanced Networking Concepts](#8-advanced-networking-concepts)
+   - [VLANs (Virtual LANs)](#81-vlans-virtual-lans)
+   - [Network Address Translation (NAT)](#82-network-address-translation-nat)
+   - [Quality of Service (QoS)](#83-quality-of-service-qos)
+   - [Load Balancing](#84-load-balancing)
+   - [Advanced Routing Protocols](#85-advanced-routing-protocols)
+   - [Software-Defined Networking (SDN)](#86-software-defined-networking-sdn)
+   - [Network Function Virtualization (NFV)](#87-network-function-virtualization-nfv)
 
-## **10. Networking in Cloud Computing**
-   - **Introduction to Cloud Networking**
-   - **Virtual Networks in the Cloud**
-   - **Cloud Networking Best Practices**
-   - **Security in Cloud Networks**
+9. [Network Troubleshooting and Tools](#9-network-troubleshooting-and-tools)
+   - [Common Network Issues](#91-common-network-issues)
+   - [Troubleshooting Steps](#92-troubleshooting-steps)
+   - [Network Troubleshooting Tools](#93-network-troubleshooting-tools)
+   - [Packet Sniffing and Analysis](#94-packet-sniffing-and-analysis)
 
-## **11. Emerging Trends in Networking**
-   - **5G and Beyond**
-   - **IoT Networking**
-   - **AI and Machine Learning in Networking**
-   - **Edge Computing**
-   - **Quantum Networking (Future Concept)**
+10. [Networking in Cloud Computing](#10-networking-in-cloud-computing)
+    - [Introduction to Cloud Networking](#101-introduction-to-cloud-networking)
+    - [Virtual Networks in the Cloud](#102-virtual-networks-in-the-cloud)
+    - [Cloud Networking Best Practices](#103-cloud-networking-best-practices)
+    - [Security in Cloud Networks](#104-security-in-cloud-networks)
 
-## **12. Hands-on Labs and Exercises**
-   - **Setting Up a Home Network**
-   - **Basic Router and Switch Configuration**
-   - **Wireshark Packet Analysis**
-   - **Subnetting Practice Problems**
-   - **Setting Up a VLAN**
-   - **Creating a Secure VPN Connection**
+11. [Emerging Trends in Networking](#11-emerging-trends-in-networking)
+    - [5G and Beyond](#111-5g-and-beyond)
+    - [IoT Networking](#112-iot-networking)
+    - [AI and Machine Learning in Networking](#113-ai-and-machine-learning-in-networking)
+    - [Edge Computing](#114-edge-computing)
+    - [Quantum Networking (Future Concept)](#115-quantum-networking-future-concept)
+
+12. [Hands-on Labs and Exercises](#12-hands-on-labs-and-exercises)
+    - [Setting Up a Home Network](#121-setting-up-a-home-network)
+    - [Basic Router and Switch Configuration](#122-basic-router-and-switch-configuration)
+    -
