@@ -128,22 +128,22 @@ Sure! I’ll expand the list to reach **500 commands**, focusing on various cate
 | `javac -d`   | Compiles Java code with a destination folder          | ✅                    | ✅                  |
 | `nuget restore`| Restores NuGet packages for a project               | ✅                    | ✅                  |
 
-### 8. **Advanced Networking Commands**
+### 8. **Advanced Networking Commands** 
 
-| **Command**  | **Description**                                       | **Windows Terminal** | **Command Prompt** |
-|--------------|-------------------------------------------------------|----------------------|--------------------|
-| `netsh wlan show`| Displays wireless networks and configurations     | ✅                    | ✅                  |
-| `netsh advfirewall export`| Exports firewall rules                   | ✅                    | ✅                  |
-| `netsh int ip reset`| Resets TCP/IP settings                         | ✅                    | ✅                  |
-| `netsh http show iplisten`| Displays IP addresses for HTTP listeners | ✅                    | ✅                  |
-| `pathping`   | Provides details on network latency                   | ✅                    | ✅                  |
-| `net stop wuauserv`| Stops Windows Update service                    | ✅                    | ✅                  |
-| `getmac /v`  | Displays MAC addresses with additional info
+| **Command**             | **Description**                                          | **Windows Terminal** | **Command Prompt** |
+|-------------------------|----------------------------------------------------------|----------------------|--------------------|
+| `netsh wlan show`        | Displays wireless networks and configurations            | ✅                    | ✅                  |
+| `netsh advfirewall export`| Exports firewall rules                                   | ✅                    | ✅                  |
+| `netsh int ip reset`     | Resets TCP/IP settings                                    | ✅                    | ✅                  |
+| `netsh http show iplisten`| Displays IP addresses for HTTP listeners                 | ✅                    | ✅                  |
+| `pathping`               | Provides details on network latency                      | ✅                    | ✅                  |
+| `net stop wuauserv`      | Stops Windows Update service                             | ✅                    | ✅                  |
+| `getmac /v`              | Displays MAC addresses with additional info              | ✅                    | ✅                  |
+| `net user /active`       | Activates or deactivates a user account                  | ✅                    | ✅                  |
+| `net statistics`         | Displays network statistics                              | ✅                    | ✅                  |
+| `curl`                  | Transfers data from or to a server                        | ✅                    | ❌                  |
 
-           | ✅                    | ✅                  |
-| `net user /active`| Activates or deactivates a user account          | ✅                    | ✅                  |
-| `net statistics`| Displays network statistics                        | ✅                    | ✅                  |
-| `curl`       | Transfers data from or to a server                    | ✅                    | ❌                  |
+
 
 ---
 - **[Follow Me On X](https://x.com/code_with_ssn)**
