@@ -70,6 +70,6 @@ This repository is licensed under the MIT License. See the `LICENSE` file for mo
 For any queries, feel free to reach out:
 
 - **GitHub**: [Salik-Seraj](https://github.com/Salik-Seraj)
-- **Email**: [salikserajnaik@gmail.com]
+- **Email**: salikserajnaik@gmail.com
 
 Happy hacking!
