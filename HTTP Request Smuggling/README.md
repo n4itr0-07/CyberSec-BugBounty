@@ -218,4 +218,3 @@ e.g., Content-Length/Transfer-Encoding inconsistencies).
 ## Conclusion
 
 HTTP Request Smuggling is a highly impactful and often-overlooked vulnerability that can have devastating consequences. By understanding the intricacies of how different systems process HTTP requests and implementing strict parsing rules, the risk of HRS can be significantly mitigated. Always conduct thorough testing to detect and prevent this class of attacks.
-
