@@ -1,7 +1,3 @@
-Here is the revised version of the **Netcat README** in `.md` format for GitHub, including a comprehensive table of options and a valid cheat sheet link.
-
----
-
 # Netcat (nc) - The Swiss Army Knife of Networking
 
 ## What is Netcat?
