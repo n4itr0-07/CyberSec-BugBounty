@@ -176,11 +176,12 @@ nc -l 12345 < /tmp/fifo | nc <target-ip> <target-port> > /tmp/fifo
 
 ## Netcat Cheat Sheet
 
-You can access a detailed **[Netcat Cheat Sheet](https://pentest.sans.org/security-resources/posters/netcat-cheat-sheet/240/download)** by SANS, which provides more advanced usage tips for both Linux and Windows.
+> **You can access a detailed **[Netcat Cheat Sheet](https://pentest.sans.org/security-resources/posters/netcat-cheat-sheet/240/download)** by SANS, which provides more advanced usage tips for both Linux and Windows.**
+
+> **One more CheatSheet With Best GUI **[Netcat Cheat Sheet](https://drive.google.com/file/d/1o0LZvm8lXNJQDShkcLxj_hFjwUDe4e81/view?usp=sharing)** Download it and enjoy!** 
 
 ---
 
 ## Conclusion
 
 Netcat is a versatile and essential tool for network testing and penetration testing. Whether you are scanning ports, transferring files, or establishing a reverse shell, Netcat can handle the task with ease. Be sure to explore the full range of its capabilities responsibly.
-
