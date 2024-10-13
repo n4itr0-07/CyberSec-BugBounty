@@ -11,6 +11,7 @@ Welcome to the **ultimate guide** on fuzzing using **FFUF**! Whether you're just
 - [FFUF Cheat Sheet and Resources](#-ffuf-cheat-sheet-and-resources)
 - [FFUF Tool – Command Reference](#-ffuf-tool--command-reference)
 - [FFUF Command Examples](#-ffuf-command-examples)
+- [FFUF Command Options Explained](#-ffuf-command-options-explained)
 - [Advanced Fuzzing Techniques](#-advanced-fuzzing-techniques)
 - [Fuzzing for Vulnerabilities](#-fuzzing-for-specific-vulnerabilities)
 - [Integrating FFUF with Other Tools](#-integrating-ffuf-with-other-tools)
@@ -78,23 +79,38 @@ Here are some must-know resources to boost your fuzzing skills:
 
 FFUF comes with a variety of options to customize your fuzzing experience. Here's a quick reference guide:
 
-| Command/Option   | Description                                                                                       |
-| ---------------- | ------------------------------------------------------------------------------------------------- |
-| `-u`             | URL of the target, with `FUZZ` keyword marking where fuzzing occurs.                               |
-| `-w`             | Wordlist for fuzzing (can include multiple wordlists).                                             |
-| `-X`             | HTTP method (GET, POST, PUT, DELETE, etc.).                                                       |
-| `-d`             | POST data (for POST requests).                                                                    |
-| `-H`             | Add headers to the request.                                                                       |
-| `-t`             | Number of threads (concurrent requests).                                                          |
-| `-r`             | Follow redirects automatically.                                                                   |
-| `-x`             | Proxy support (send requests through a proxy).                                                    |
-| `-fs`            | Filter responses by size (exclude specific sizes).                                                |
-| `-fc`            | Filter responses by HTTP response codes (exclude specific status codes).                           |
-| `-mc`            | Match specific HTTP response codes (only include specific status codes).                           |
-| `-s`             | Silent mode (minimal output).                                                                     |
-| `-o`             | Output results to a file.                                                                         |
-| `-ac`            | Auto-calibration to reduce noise based on response patterns.                                       |
-| `-e`             | Extensions to append to the fuzzing wordlist (e.g., `.php`, `.txt`).                               |
+| Command/Option     | Description                                                                                       |
+| ------------------ | ------------------------------------------------------------------------------------------------- |
+| `-u`               | URL of the target, with `FUZZ` keyword marking where fuzzing occurs.                               |
+| `-w`               | Wordlist for fuzzing. Can specify multiple wordlists with commas or multiple `-w` options.         |
+| `-X`               | Specify the HTTP method (GET, POST, PUT, DELETE, etc.).                                            |
+| `-d`               | POST data to be sent in requests (for POST requests).                                              |
+| `-H`               | Add custom headers to the request. Multiple headers can be added by using multiple `-H` options.   |
+| `-t`               | Number of concurrent threads (concurrent requests).                                                |
+| `-r`               | Automatically follow redirects.                                                                   |
+| `-x`               | Proxy support: send requests through a specified proxy (e.g., Burp Suite).                         |
+| `-fs`              | Filter responses by size (exclude specific sizes).                                                 |
+| `-fc`              | Filter responses by HTTP status codes (exclude specific status codes).                             |
+| `-mc`              | Match specific HTTP status codes (only include specific status codes).                             |
+| `-s`               | Silent mode (minimal output).                                                                     |
+| `-o`               | Output results to a file.                                                                         |
+| `-of`              | Output file format (`json`, `html`, `csv`, `md`).                                                  |
+| `-recursion`       | Enables recursive fuzzing (fuzz deeper into the discovered directories).                           |
+| `-recursion-depth` | Set recursion depth. Defines how many levels deep to recurse during fuzzing.                       |
+| `-e`               | Extensions to append to the fuzzing wordlist (e.g., `.php`, `.txt`, `.html`).                      |
+| `-ac`              | Auto-calibration mode: automatically reduces noise by calibrating against baseline responses.      |
+| `-rate`            | Set the number of requests per second (to avoid rate limiting).                                    |
+| `-timeout`         | Set a timeout value (in seconds) for each request.                                                 |
+| `-input-cmd`       | Use an external command to provide input for fuzzing (stdin).                                      |
+| `-input-num`       | Number of entries to process from the input.                                                       |
+| `-input-shell`     | Use a shell command as the input generator for fuzzing.                                             |
+| `-v`               | Verbose mode: show additional information during execution.                                        |
+| `-p`               | Delay in seconds between each request to avoid rate limiting or detection.                         |
+| `-replay-proxy`    | Proxy through which to replay requests that triggered interesting results.                         |
+| `-ignore-body`     | Ignore the response body in the results output.                                                    |
+| `-noninteractive`  | Disable the interactive progress bar and use a cleaner output format (for scripts).                |
+| `-debug-log`       | Write a debug log to a specified file for troubleshooting.                                         |
+| `-auth`            | Use HTTP Basic Authentication (format: username:password).                                         |
 
 ---
 
@@ -111,7 +127,7 @@ ffuf -u https://target.com/FUZZ -w /path/to/wordlist/directory-list.txt
 Fuzz a POST request's `username` field:
 
 ```bash
-ffuf -u https://target.com/login -X POST -d 'username=FUZZ&password=pass123' -w /path/to/wordlist.txt
+ffuf -u https://target.com/login -X POST -d 'username=FUZZ&password=password' -w /path/to/wordlist.txt
 ```
 
 ### 3. 🔎 Fuzzing with Custom Headers
@@ -144,13 +160,219 @@ ffuf -u https://target.com/FUZZ -w /path/to/wordlist.txt -x http://127.0.0.1:808
 
 ---
 
+## 🔍 FFUF Command Options Explained
+
+### 1. `-u` (URL)
+
+**Description**: The target URL where you want to fuzz. The keyword `FUZZ` in the URL tells FFUF where to insert the fuzzed data.
+
+**Example**:
+
+```bash
+ffuf
+
+ -u https://target.com/FUZZ -w /path/to/wordlist.txt
+```
+
+### 2. `-w` (Wordlist)
+
+**Description**: The path to the wordlist you want to use for fuzzing. You can provide multiple wordlists by separating them with commas or using multiple `-w` flags.
+
+**Example**:
+
+```bash
+ffuf -u https://target.com/FUZZ -w /path/to/wordlist1.txt,/path/to/wordlist2.txt
+```
+
+### 3. `-X` (HTTP Method)
+
+**Description**: Specifies the HTTP method to use (GET, POST, PUT, DELETE, etc.).
+
+**Example**:
+
+```bash
+ffuf -u https://target.com/login -X POST -d 'username=FUZZ&password=password' -w /path/to/wordlist.txt
+```
+
+### 4. `-d` (POST Data)
+
+**Description**: Data to send in the body of the request. This is typically used in POST requests.
+
+**Example**:
+
+```bash
+ffuf -u https://target.com/login -X POST -d 'username=FUZZ&password=pass123' -w /path/to/wordlist.txt
+```
+
+### 5. `-H` (Custom Headers)
+
+**Description**: Add custom headers to the request. You can add multiple headers by repeating the `-H` option.
+
+**Example**:
+
+```bash
+ffuf -u https://target.com/admin -H "Authorization: Bearer FUZZ" -w /path/to/wordlist.txt
+```
+
+### 6. `-t` (Number of Threads)
+
+**Description**: Specifies the number of concurrent requests (threads). More threads = faster fuzzing, but it may increase the chance of detection or getting blocked.
+
+**Example**:
+
+```bash
+ffuf -u https://target.com/FUZZ -w /path/to/wordlist.txt -t 50
+```
+
+### 7. `-r` (Follow Redirects)
+
+**Description**: Automatically follows redirects when fuzzing.
+
+**Example**:
+
+```bash
+ffuf -u https://target.com/FUZZ -w /path/to/wordlist.txt -r
+```
+
+### 8. `-x` (Proxy)
+
+**Description**: Use a proxy to send requests through (e.g., Burp Suite or ZAP).
+
+**Example**:
+
+```bash
+ffuf -u https://target.com/FUZZ -w /path/to/wordlist.txt -x http://127.0.0.1:8080
+```
+
+### 9. `-fs` (Filter by Size)
+
+**Description**: Exclude responses that match the specified size in bytes.
+
+**Example**:
+
+```bash
+ffuf -u https://target.com/FUZZ -w /path/to/wordlist.txt -fs 100
+```
+
+### 10. `-fc` (Filter by Status Code)
+
+**Description**: Exclude responses that return specific HTTP status codes.
+
+**Example**:
+
+```bash
+ffuf -u https://target.com/FUZZ -w /path/to/wordlist.txt -fc 404
+```
+
+### 11. `-mc` (Match by Status Code)
+
+**Description**: Only include responses that return specific HTTP status codes.
+
+**Example**:
+
+```bash
+ffuf -u https://target.com/FUZZ -w /path/to/wordlist.txt -mc 200
+```
+
+### 12. `-s` (Silent Mode)
+
+**Description**: Minimizes the output to only show results, useful when fuzzing in a non-interactive mode or scripting.
+
+**Example**:
+
+```bash
+ffuf -u https://target.com/FUZZ -w /path/to/wordlist.txt -s
+```
+
+### 13. `-o` and `-of` (Output and Format)
+
+**Description**: Save the fuzzing results to a file. You can specify the format with `-of`, including JSON, CSV, HTML, and Markdown (md).
+
+**Example**:
+
+```bash
+ffuf -u https://target.com/FUZZ -w /path/to/wordlist.txt -o results.json -of json
+```
+
+### 14. `-recursion` and `-recursion-depth`
+
+**Description**: Enables recursive fuzzing (FFUF will automatically fuzz directories found) and sets the recursion depth.
+
+**Example**:
+
+```bash
+ffuf -u https://target.com/FUZZ -w /path/to/wordlist.txt -recursion -recursion-depth 2
+```
+
+### 15. `-e` (File Extensions)
+
+**Description**: Append extensions to the fuzzed wordlist (e.g., `.php`, `.html`, `.txt`).
+
+**Example**:
+
+```bash
+ffuf -u https://target.com/FUZZ -w /path/to/wordlist.txt -e .php,.txt
+```
+
+### 16. `-ac` (Auto-Calibration)
+
+**Description**: Automatically adjusts based on baseline responses to reduce noise and false positives.
+
+**Example**:
+
+```bash
+ffuf -u https://target.com/FUZZ -w /path/to/wordlist.txt -ac
+```
+
+### 17. `-rate` (Rate Limiting)
+
+**Description**: Set the number of requests per second to avoid getting blocked by rate-limiting mechanisms.
+
+**Example**:
+
+```bash
+ffuf -u https://target.com/FUZZ -w /path/to/wordlist.txt -rate 100
+```
+
+### 18. `-timeout` (Request Timeout)
+
+**Description**: Set a timeout (in seconds) for each request.
+
+**Example**:
+
+```bash
+ffuf -u https://target.com/FUZZ -w /path/to/wordlist.txt -timeout 5
+```
+
+### 19. `-input-cmd` (Input via Command)
+
+**Description**: Use an external command to generate input for fuzzing, e.g., from `stdin`.
+
+**Example**:
+
+```bash
+ffuf -u https://target.com/FUZZ -input-cmd "cat wordlist.txt"
+```
+
+### 20. `-v` (Verbose Mode)
+
+**Description**: Enables verbose mode, showing additional information about the fuzzing process.
+
+**Example**:
+
+```bash
+ffuf -u https://target.com/FUZZ -w /path/to/wordlist.txt -v
+```
+
+---
+
 ## 🔍 Advanced Fuzzing Techniques
 
 ### Recursive Fuzzing
 Use FFUF to fuzz deeper directories:
 
 ```bash
-ffuf -u https://target.com/FUZZ -w /path/to/wordlist.txt -recursion
+ffuf -u https://target.com/FUZZ -w /path/to/wordlist.txt -recursion -recursion-depth 2
 ```
 
 ### Fuzzing APIs and JSON
@@ -222,9 +444,7 @@ ffuf -u https://target.com/FUZZ -w /path/to/wordlist.txt -rate 50
 ```
 
 ### Rotate User-Agents
-Change the User-Agent header with each
-
- request:
+Change the User-Agent header with each request:
 
 ```bash
 ffuf -u https://target.com/FUZZ -H "User-Agent: FUZZ" -w /path/to/user-agents.txt
@@ -255,7 +475,9 @@ Increase the timeout if FFUF is too fast for the server:
 1. **Recon**: Use tools like `masscan` or `nmap` to discover open ports and services.
 2. **Directory Fuzzing**: Use FFUF to find hidden directories and files.
 3. **Parameter Fuzzing**: Explore web forms and parameters with FFUF for hidden inputs.
-4. **Vulnerability-Specific Fuzzing**: Test for vulnerabilities like SQLi, XSS, and more.
+4. **Vulnerability-Specific Fuzzing**: Test for
+
+ vulnerabilities like SQLi, XSS, and more.
 
 ---
 
