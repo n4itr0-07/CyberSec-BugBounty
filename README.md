@@ -1,12 +1,12 @@
-# CyberSec-BugBounty
+# SecToolkit
 
-![License](https://img.shields.io/github/license/n4itr0-07/SecToolkit)
+![License](https://img.shields.io/badge/License-MIT-blue.svg)
 ![Stars](https://img.shields.io/github/stars/n4itr0-07/SecToolkit?style=social)
 ![Issues](https://img.shields.io/github/issues/n4itr0-07/SecToolkit)
 
 ## Overview
 
-Welcome to **CyberSec-BugBounty**, a comprehensive collection of resources, tutorials, and hands-on projects dedicated to **cybersecurity** and **bug bounty hunting**. Whether you're just starting or you're an experienced professional, you'll find everything from fundamental security concepts to advanced techniques that are actively used in the field.
+Welcome to **__SecTookit__**, a comprehensive collection of resources, tutorials, and hands-on projects dedicated to **cybersecurity** and **bug bounty hunting**. Whether you're just starting or you're an experienced professional, you'll find everything from fundamental security concepts to advanced techniques that are actively used in the field.
 
 > **Why this repo?**  
 > It’s a dynamic and continuously updated resource focused on the latest security vulnerabilities and exploit techniques that provide essential knowledge for mastering cybersecurity and penetration testing.
